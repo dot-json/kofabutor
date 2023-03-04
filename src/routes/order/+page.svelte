@@ -256,7 +256,7 @@
 		height: fit-content;
 		padding: 1rem 2rem;
 		border: 2px solid #646464;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		background-color: #1a1a1a;
 	}
 	.tl_iconbox {
@@ -268,7 +268,7 @@
 		height: 8rem;
 		color: var(--text-col);
 		border: 2px solid #646464;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		background-color: #1a1a1a;
 	}
 	.tl_step_title {
@@ -290,7 +290,7 @@
 		max-width: 27rem;
 		min-height: 10rem;
 		padding: 1rem;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		border: 2px solid #646464;
 		background-color: #1a1a1a;
 	}

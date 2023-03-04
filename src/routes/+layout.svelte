@@ -23,9 +23,10 @@
 		window.addEventListener('resize', () => {
 			window_width = window.innerWidth;
 		});
-
+		if (root) root.style.overflow = 'hidden';
 		setTimeout(() => {
 			firstLoad = false;
+			if (root) root.style.overflow = 'initial';
 		}, 1800);
 	});
 </script>

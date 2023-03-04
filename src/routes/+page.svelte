@@ -72,7 +72,7 @@
 		display: flex;
 		width: 100%;
 		max-width: 90rem;
-		padding: 5rem 0;
+		padding: 6rem 0;
 		gap: 4rem;
 	}
 	.hero_side {
@@ -161,7 +161,7 @@
 		justify-content: space-between;
 		width: 100%;
 		max-width: 90rem;
-		padding: 4rem 0;
+		padding: 6rem 0;
 	}
 	.intro_text_wrapper {
 		display: flex;
@@ -203,9 +203,6 @@
 		}
 	}
 	@media screen and (max-width: 1380px) {
-		.hero_wrapper {
-			padding: 4rem 0;
-		}
 		.hero_title {
 			font-size: 3rem;
 			margin-top: 2rem;
@@ -243,7 +240,7 @@
 		.hero_wrapper {
 			max-width: 45rem;
 			flex-direction: column;
-			gap: 4rem;
+			gap: 1rem;
 			padding: 2rem 0;
 		}
 		.hero_side {
@@ -256,7 +253,7 @@
 		}
 		.hero_title2 {
 			font-size: 1.6rem;
-			margin-bottom: 4rem;
+			margin-bottom: 2.5rem;
 		}
 		.pictures_wrapper {
 			height: 26rem;
@@ -281,7 +278,7 @@
 		.hero_wrapper {
 			max-width: 35rem;
 			flex-direction: column;
-			gap: 2rem;
+			gap: 0rem;
 			padding: 2rem 0;
 		}
 		.hero_title {
@@ -289,7 +286,7 @@
 		}
 		.hero_title2 {
 			font-size: clamp(1.2rem, 5vw, 1.6rem);
-			margin-bottom: 3rem;
+			margin-bottom: 1.25rem;
 		}
 		.hero_icons_wrapper {
 			align-self: center;
