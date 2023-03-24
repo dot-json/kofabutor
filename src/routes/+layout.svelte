@@ -53,8 +53,9 @@
 		--max-width: 1100px;
 		--text-col: #eee;
 		--sec-text-col: #c0c0c0;
+		--dark-text-col: #a0a0a0;
 		--nav-text-col: #dadada;
-		--bg-col: #161616; /* #161616 */
+		--bg-col: #161616;
 		--darker-bg-col: #121212;
 		--primary-col: #ff004d;
 	}
@@ -84,6 +85,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+		min-height: 100vh;
 		max-width: 1920px;
 		padding: 10rem 4rem 5rem 4rem;
 	}
@@ -92,13 +94,9 @@
 			padding: 6rem 4rem 4rem 4rem;
 		}
 	}
-	@media screen and (max-width: 1140px) {
-		main {
-			padding: 7rem 2rem 4rem 2rem;
-		}
-	}
 	@media screen and (max-width: 800px) {
 		main {
+			min-height: auto;
 			padding: 5rem 2rem 4rem 2rem;
 		}
 	}

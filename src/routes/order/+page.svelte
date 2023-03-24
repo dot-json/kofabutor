@@ -177,7 +177,7 @@
 		font-weight: 600;
 		font-size: clamp(2rem, 4vw, 4rem);
 		color: var(--text-col);
-		margin: 2rem 0 3rem 0;
+		margin: 3rem 0 5rem 0;
 		text-align: center;
 	}
 	.timeline {
@@ -306,6 +306,9 @@
 		}
 	}
 	@media screen and (max-width: 800px) {
+		.title {
+			margin: 2rem 0 3rem 0;
+		}
 		.tl_step_title {
 			font-size: 1.6rem;
 		}

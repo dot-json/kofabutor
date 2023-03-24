@@ -77,7 +77,7 @@
 						<span class="title">KOFA</span>
 					</div>
 				{:else}
-					<a class="logo_wrapper" href="/">
+					<a class="logo_wrapper" href="/" on:click={isOpen ? lSetOpen : () => {}}>
 						<Logo />
 					</a>
 				{/if}
@@ -98,14 +98,14 @@
 	</header>
 {/if}
 {#if isOpen}
-	<div class="menu_wrapper" in:fade={{ duration: 200 }} out:fade={{ duration: 200, delay: 600 }}>
+	<div class="menu_wrapper" in:fade={{ duration: 220 }} out:fade={{ duration: 220, delay: 670 }}>
 		<div class="menu_container">
 			<ul class="menu_ul">
 				{#each pages as page, i}
 					<li
 						class="menu_li"
-						in:fly={{ delay: 120 * (i + 1), duration: 250, x: 300, easing: cubicInOut }}
-						out:fly={{ delay: 85 * i, duration: 250, x: 200, easing: cubicInOut }}
+						in:fly={{ delay: 125 * (i + 1), duration: 250, x: 300, easing: cubicInOut }}
+						out:fly={{ delay: 125 * i, duration: 250, x: 200, easing: cubicInOut }}
 					>
 						<span class="menu_li_id">0{i}</span>
 						<div class="menu_li_line" />

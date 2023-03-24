@@ -90,7 +90,7 @@
 	}
 	.hero_title2 {
 		font-family: 'Inter', sans-serif;
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 2rem;
 		color: var(--sec-text-col);
 	}
@@ -302,6 +302,9 @@
 		.picture_frame {
 			width: 12rem;
 			height: 8rem;
+		}
+		.intro_section {
+			padding: 2rem 0;
 		}
 		.intro_section_title {
 			font-size: 3rem;
