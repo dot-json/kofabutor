@@ -7,6 +7,7 @@
 	import Price from '../../components/svg/Price.svelte';
 	import Tick from '../../components/svg/Tick.svelte';
 	import Transition from '../../components/transition.svelte';
+	import Woodgrid from '../../components/woodgrid.svelte';
 
 	let window_width: number = 0;
 
@@ -24,7 +25,7 @@
 
 <Transition>
 	<h1 class="title">Hogyan zajlik a velünk való együttműködés?</h1>
-	<section class="timeline">
+	<section>
 		{#if window_width > 1144}
 			<div class="tl_line" />
 			<div class="tl_row">
@@ -135,7 +136,6 @@
 					lenne az Ön számára ideális bútor.</span
 				>
 			</div>
-			<div class="m_tl_vline" />
 			<div class="m_tl_step">
 				<span class="tl_step_title">2 - Tervezés és árajánlat</span>
 				<span class="tl_step_text"
@@ -143,7 +143,6 @@
 					magában foglaló vállalási díjával együtt eljuttatjuk Önnek.</span
 				>
 			</div>
-			<div class="m_tl_vline" />
 			<div class="m_tl_step">
 				<span class="tl_step_title">3 - Gyártás</span>
 				<span class="tl_step_text"
@@ -151,7 +150,6 @@
 					közben felvetőtő módosítási kéréseiket is.</span
 				>
 			</div>
-			<div class="m_tl_vline" />
 			<div class="m_tl_step">
 				<span class="tl_step_title">4 - Szállítás és szerelés</span>
 				<span class="tl_step_text"
@@ -159,7 +157,6 @@
 					gondoskodunk a szakszerű összeszerelésről is.</span
 				>
 			</div>
-			<div class="m_tl_vline" />
 			<div class="m_tl_step">
 				<span class="tl_step_title">5 - Átadás</span>
 				<span class="tl_step_text"
@@ -169,18 +166,25 @@
 			</div>
 		{/if}
 	</section>
+	<section>
+		<h2 class="title title2">Fa választék</h2>
+		<Woodgrid />
+	</section>
 </Transition>
 
 <style>
 	.title {
 		font-family: 'Inter', sans-serif;
 		font-weight: 600;
-		font-size: clamp(2rem, 4vw, 4rem);
+		font-size: clamp(3rem, 4vw, 4rem);
 		color: var(--text-col);
-		margin: 3rem 0 5rem 0;
+		margin: 2rem 0 5rem 0;
 		text-align: center;
 	}
-	.timeline {
+	.title2 {
+		margin-top: 5rem;
+	}
+	section {
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -204,7 +208,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		width: 12%;
+		width: 10%;
 		color: var(--text-col);
 	}
 	.tl_middle_dot {
@@ -212,7 +216,7 @@
 		position: absolute;
 		width: 1rem;
 		height: 1rem;
-		background-color: #646464;
+		background-color: #404042;
 		border-radius: 50%;
 	}
 	.tl_line {
@@ -222,19 +226,19 @@
 		left: calc(50% - 0.125rem);
 		width: 0.25rem;
 		height: 100%;
-		background-color: #424242;
+		background-color: #323234;
 	}
 	.tl_vline {
 		z-index: -1;
 		position: absolute;
 		width: 100%;
 		height: 2px;
-		background-color: #646464;
+		background-color: #444448;
 	}
 	.tl_left {
 		display: flex;
 		flex-direction: column;
-		width: 44%;
+		width: 45%;
 		min-height: 12rem;
 		height: fit-content;
 		align-items: flex-end;
@@ -243,7 +247,7 @@
 	.tl_right {
 		display: flex;
 		flex-direction: column;
-		width: 44%;
+		width: 45%;
 		min-height: 12rem;
 		height: fit-content;
 		align-items: flex-start;
@@ -255,9 +259,8 @@
 		width: 27rem;
 		height: fit-content;
 		padding: 1rem 2rem;
-		border: 2px solid #646464;
 		border-radius: 0.5rem;
-		background-color: #1a1a1a;
+		background-color: var(--box-bg-color);
 	}
 	.tl_iconbox {
 		display: flex;
@@ -267,9 +270,8 @@
 		width: 8rem;
 		height: 8rem;
 		color: var(--text-col);
-		border: 2px solid #646464;
 		border-radius: 0.5rem;
-		background-color: #1a1a1a;
+		background-color: var(--box-bg-color);
 	}
 	.tl_step_title {
 		font-family: 'Inter', sans-serif;
@@ -291,23 +293,33 @@
 		min-height: 10rem;
 		padding: 1rem;
 		border-radius: 0.5rem;
-		border: 2px solid #646464;
-		background-color: #1a1a1a;
-	}
-	.m_tl_vline {
-		width: 2px;
-		background-color: #646464;
-		height: 3rem;
+		background-color: var(--box-bg-color);
 	}
 
 	@media screen and (max-width: 1144px) {
+		section {
+			gap: 2rem;
+		}
 		.m_tl_step {
 			max-width: 32rem;
+		}
+		.title {
+			margin: 2rem 0 4rem 0;
+		}
+		.title2 {
+			margin-top: 4rem;
+			margin-bottom: 2rem;
 		}
 	}
 	@media screen and (max-width: 800px) {
 		.title {
+			font-size: 2rem;
 			margin: 2rem 0 3rem 0;
+		}
+		.title2 {
+			margin-top: 3rem;
+			margin-bottom: 1rem;
+			font-size: 2.25rem;
 		}
 		.tl_step_title {
 			font-size: 1.6rem;
@@ -318,9 +330,6 @@
 		.m_tl_step {
 			max-width: 22rem;
 			min-height: initial;
-		}
-		.m_tl_vline {
-			height: 2rem;
 		}
 	}
 </style>

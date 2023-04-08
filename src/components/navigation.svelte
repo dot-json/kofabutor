@@ -52,6 +52,9 @@
 		setTimeout(() => {
 			if (isOpen) scrambleWord();
 		}, 200);
+		if (isOpen) {
+			isScrolled = window.pageYOffset > 0;
+		}
 	};
 
 	onMount(() => {
@@ -139,12 +142,14 @@
 		backdrop-filter: blur(12px);
 		transform: translateX(-50%);
 		padding: 3rem 4rem;
-		transition: padding 300ms ease, background-color 500ms ease, box-shadow 500ms ease;
+		transition: padding 300ms ease, background-color 500ms ease, box-shadow 200ms ease,
+			border-bottom 200ms ease;
 	}
 	.header_scrolled {
 		padding: 1rem 4rem;
-		background-color: var(--darker-bg-col);
-		box-shadow: 0 0.71rem 1rem rgba(0, 0, 0, 0.32);
+		background-color: var(--bg-col);
+		border-bottom: 1px solid var(--darker-bg-col);
+		box-shadow: 0 0.71rem 1rem rgba(0, 0, 0, 0.44);
 	}
 	nav {
 		display: flex;
@@ -292,7 +297,7 @@
 		font-family: 'Inter', sans-serif;
 		font-weight: 800;
 		font-size: 15rem;
-		color: #1b1b1b;
+		color: #171719;
 		line-height: 0.85em;
 		user-select: none;
 	}

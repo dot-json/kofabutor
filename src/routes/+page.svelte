@@ -90,7 +90,7 @@
 	}
 	.hero_title2 {
 		font-family: 'Inter', sans-serif;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 2rem;
 		color: var(--sec-text-col);
 	}

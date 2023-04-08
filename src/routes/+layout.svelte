@@ -51,12 +51,13 @@
 <style>
 	:root {
 		--max-width: 1100px;
-		--text-col: #eee;
-		--sec-text-col: #c0c0c0;
+		--text-col: #dfdfdf;
+		--sec-text-col: #88888b;
 		--dark-text-col: #a0a0a0;
 		--nav-text-col: #dadada;
-		--bg-col: #161616;
-		--darker-bg-col: #121212;
+		--bg-col: #171719;
+		--darker-bg-col: #121214;
+		--box-bg-color: #222226;
 		--primary-col: #ff004d;
 	}
 	:global(*) {
@@ -78,6 +79,7 @@
 	}
 	:global(::selection) {
 		background-color: #cf003f;
+		color: var(--text-col);
 	}
 	main {
 		z-index: 1;
