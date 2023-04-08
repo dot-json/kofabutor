@@ -139,10 +139,12 @@
 		backdrop-filter: blur(12px);
 		transform: translateX(-50%);
 		padding: 3rem 4rem;
-		transition: padding 300ms ease;
+		transition: padding 300ms ease, background-color 500ms ease, box-shadow 500ms ease;
 	}
 	.header_scrolled {
 		padding: 1rem 4rem;
+		background-color: var(--darker-bg-col);
+		box-shadow: 0 0.71rem 1rem rgba(0, 0, 0, 0.32);
 	}
 	nav {
 		display: flex;
