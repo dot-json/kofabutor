@@ -65,7 +65,7 @@
 </script>
 
 {#if window_width != 0}
-	<header class:header_scrolled={isScrolled && !isOpen && window_width > 800} in:fade>
+	<header class:header_scrolled={isScrolled && !isOpen} in:fade>
 		<nav>
 			{#if window_width > 800}
 				<a class="icon_wrapper" href="/" on:click={isOpen ? lSetOpen : () => {}}><Home /></a>
@@ -138,18 +138,14 @@
 		width: 100%;
 		top: 0;
 		left: 50%;
-		-webkit-backdrop-filter: blur(12px);
-		backdrop-filter: blur(12px);
+		background-color: var(--color-surface-900);
 		transform: translateX(-50%);
 		padding: 3rem 4rem;
-		transition: padding 300ms ease, background-color 500ms ease, box-shadow 200ms ease,
-			border-bottom 200ms ease;
+		transition: padding 300ms ease, box-shadow 200ms ease, border-bottom 200ms ease;
 	}
 	.header_scrolled {
 		padding: 1rem 4rem;
-		background-color: var(--bg-col);
-		border-bottom: 1px solid var(--darker-bg-col);
-		box-shadow: 0 0.71rem 1rem rgba(0, 0, 0, 0.44);
+		box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.12);
 	}
 	nav {
 		display: flex;
@@ -167,11 +163,11 @@
 		height: 3rem;
 		width: 3rem;
 		cursor: pointer;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		transition: color 200ms ease;
 	}
 	.icon_wrapper:hover {
-		color: var(--primary-col);
+		color: var(--color-primary-500);
 	}
 	.icon {
 		z-index: 11;
@@ -195,7 +191,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		transition: all 200ms ease;
 	}
 	.title_inner_wrapper {
@@ -207,7 +203,7 @@
 	}
 	.divider {
 		height: 100%;
-		border-right: 1px solid grey;
+		border-right: 1px solid var(--color-surface-400);
 	}
 	.title {
 		font-family: 'Inter', sans-serif;
@@ -215,7 +211,7 @@
 		font-size: 2.8rem;
 		width: 8rem;
 		text-align: center;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		user-select: none;
 	}
 	.menu_wrapper {
@@ -227,7 +223,7 @@
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: var(--darker-bg-col);
+		background-color: var(--color-surface-900);
 	}
 	.menu_container {
 		z-index: inherit;
@@ -239,7 +235,7 @@
 		height: 100%;
 		padding-top: 8rem;
 		max-width: 1920px;
-		background-color: var(--darker-bg-col);
+		background-color: var(--color-surface-900);
 	}
 	.menu_ul {
 		z-index: 10;
@@ -259,7 +255,7 @@
 		transition: color 200ms ease, letter-spacing 200ms ease;
 	}
 	.menu_link:hover {
-		color: var(--primary-col);
+		color: var(--color-primary-500);
 		letter-spacing: 0.025rem;
 	}
 	.menu_li {
@@ -269,21 +265,21 @@
 		font-family: 'Inter', sans-serif;
 		font-weight: 500;
 		font-size: 3.4rem;
-		color: var(--nav-text-col);
+		color: var(--color-text-primary);
 		text-transform: uppercase;
 		white-space: nowrap;
-		border-bottom: 1px solid #383838;
+		border-bottom: 1px solid var(--color-surface-500);
 		user-select: none;
 	}
 	.menu_li_id {
 		font-family: 'Inter', sans-serif;
 		font-weight: 300;
 		font-size: 3.4rem;
-		color: #a3a3a3;
+		color: var(--color-surface-400);
 	}
 	.menu_li_line {
 		flex-grow: 1;
-		border-bottom: 1px dashed grey;
+		border-bottom: 1px dashed var(--color-surface-400);
 		margin: 0 0.5rem;
 	}
 	.menu_wm_wrapper {
@@ -297,7 +293,7 @@
 		font-family: 'Inter', sans-serif;
 		font-weight: 800;
 		font-size: 15rem;
-		color: #171719;
+		color: var(--color-surface-700);
 		line-height: 0.85em;
 		user-select: none;
 	}
@@ -356,6 +352,9 @@
 		.menu_wm {
 			font-size: clamp(2rem, 30vw, 10rem);
 		}
+		.header_scrolled {
+			padding: 0.5rem 1.5rem;
+		}
 	}
 	@media screen and (max-width: 400px) {
 		.menu_li {
@@ -367,10 +366,10 @@
 	}
 	@media (hover: none) {
 		.icon_wrapper:hover {
-			color: var(--text-col);
+			color: var(--color-text-primary);
 		}
 		.menu_link:hover {
-			color: var(--text-col);
+			color: var(--color-text-primary);
 		}
 	}
 </style>

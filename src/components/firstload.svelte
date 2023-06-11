@@ -39,8 +39,8 @@
 		height: 100vh;
 		top: 0;
 		left: 0;
-		background-color: var(--darker-bg-col);
-		color: var(--text-col);
+		background-color: var(--color-surface-900);
+		color: var(--color-text-primary);
 	}
 	.box {
 		display: flex;
@@ -53,7 +53,7 @@
 		align-items: center;
 		justify-content: center;
 		height: 4rem;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 	}
 	.bar {
 		position: relative;
@@ -61,7 +61,7 @@
 		height: 0.25rem;
 		border-radius: 0.5rem;
 		margin-top: 1.5rem;
-		background-color: #424242;
+		background-color: var(--color-surface-500);
 	}
 	.bar::before {
 		content: '';
@@ -69,7 +69,7 @@
 		width: 0%;
 		height: 100%;
 		border-radius: 0.5rem;
-		background-color: var(--primary-col);
+		background-color: var(--color-primary-500);
 		animation: loading 1200ms 300ms forwards;
 	}
 </style>

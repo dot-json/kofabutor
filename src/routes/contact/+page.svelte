@@ -19,7 +19,7 @@
 				<span class="box-info">example@domain.com</span>
 			</div>
 			<div class="box">
-				<span class="box-title">VALAMI</span>
+				<span class="box-title">INSTAGRAM</span>
 				<span class="box-info">@link_valahova</span>
 			</div>
 		</div>
@@ -30,16 +30,17 @@
 	.container {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		min-height: 40rem;
-		height: 100%;
+		flex: 1;
 		width: 80%;
 		padding: 4rem 0rem;
 	}
 	.title {
 		font-family: 'Inter', sans-serif;
 		font-size: 5rem;
-		font-weight: 500;
-		color: var(--text-col);
+		font-weight: 600;
+		color: var(--color-text-primary);
 		margin-bottom: 2rem;
 		max-width: 26ch;
 	}
@@ -47,7 +48,7 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 2rem;
 		font-weight: 400;
-		color: var(--sec-text-col);
+		color: var(--color-text-secondary);
 		margin-bottom: 8.5rem;
 	}
 	.boxes {
@@ -64,7 +65,7 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 2rem;
 		font-weight: 300;
-		color: var(--dark-text-col);
+		color: var(--color-text-dimmed);
 		margin-bottom: 0.5rem;
 		user-select: none;
 	}
@@ -72,7 +73,7 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 2.5rem;
 		font-weight: 400;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 	}
 
 	@media screen and (max-width: 1380px) {

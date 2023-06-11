@@ -177,7 +177,7 @@
 		font-family: 'Inter', sans-serif;
 		font-weight: 600;
 		font-size: clamp(3rem, 4vw, 4rem);
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		margin: 2rem 0 5rem 0;
 		text-align: center;
 	}
@@ -209,14 +209,14 @@
 		align-items: center;
 		height: 100%;
 		width: 10%;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 	}
 	.tl_middle_dot {
 		z-index: 1;
 		position: absolute;
 		width: 1rem;
 		height: 1rem;
-		background-color: #404042;
+		background-color: var(--color-surface-400);
 		border-radius: 50%;
 	}
 	.tl_line {
@@ -226,14 +226,14 @@
 		left: calc(50% - 0.125rem);
 		width: 0.25rem;
 		height: 100%;
-		background-color: #323234;
+		background-color: var(--color-surface-500);
 	}
 	.tl_vline {
 		z-index: -1;
 		position: absolute;
 		width: 100%;
 		height: 2px;
-		background-color: #444448;
+		background-color: var(--color-surface-400);
 	}
 	.tl_left {
 		display: flex;
@@ -260,31 +260,31 @@
 		height: fit-content;
 		padding: 1rem 2rem;
 		border-radius: 0.5rem;
-		background-color: var(--box-bg-color);
+		background-color: var(--color-surface-700);
 	}
 	.tl_iconbox {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 1.75rem;
+		padding: 2rem;
 		width: 8rem;
 		height: 8rem;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		border-radius: 0.5rem;
-		background-color: var(--box-bg-color);
+		background-color: var(--color-surface-700);
 	}
 	.tl_step_title {
 		font-family: 'Inter', sans-serif;
 		font-size: 1.8rem;
 		font-weight: 600;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		margin-bottom: 1rem;
 	}
 	.tl_step_text {
 		font-family: 'Inter', sans-serif;
 		font-size: 1.2rem;
 		font-weight: 400;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 	}
 	.m_tl_step {
 		display: flex;
@@ -293,7 +293,7 @@
 		min-height: 10rem;
 		padding: 1rem;
 		border-radius: 0.5rem;
-		background-color: var(--box-bg-color);
+		background-color: var(--color-surface-700);
 	}
 
 	@media screen and (max-width: 1144px) {

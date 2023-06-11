@@ -48,7 +48,7 @@
 	.tile {
 		display: flex;
 		flex-direction: column;
-		background-color: #202024;
+		background-color: var(--color-surface-700);
 		height: 18rem;
 		padding: 2rem;
 	}
@@ -63,7 +63,7 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 2.25rem;
 		font-weight: 600;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 	}
 	.image {
 		width: 5rem;
@@ -76,7 +76,7 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 1.2rem;
 		font-weight: 500;
-		color: var(--sec-text-col);
+		color: var(--color-text-secondary);
 		padding-top: 1rem;
 	}
 	@media screen and (max-width: 1144px) {
@@ -96,7 +96,6 @@
 		.title {
 			font-size: 1.75rem;
 			font-weight: 600;
-			color: var(--text-col);
 		}
 	}
 	@media screen and (max-width: 800px) {
@@ -119,7 +118,6 @@
 		.title {
 			font-size: 1.6rem;
 			font-weight: 600;
-			color: var(--text-col);
 		}
 		.desc {
 			font-size: 1.125rem;

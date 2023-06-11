@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, setContext } from 'svelte';
 	import Firstload from '../components/firstload.svelte';
 	import Navigation from '../components/navigation.svelte';
 
@@ -29,6 +29,8 @@
 			if (root) root.style.overflow = 'initial';
 		}, 1800);
 	});
+
+	setContext('window_width', window_width);
 </script>
 
 <svelte:head>
@@ -51,14 +53,32 @@
 <style>
 	:root {
 		--max-width: 1100px;
-		--text-col: #dfdfdf;
-		--sec-text-col: #88888b;
-		--dark-text-col: #a0a0a0;
-		--nav-text-col: #dadada;
-		--bg-col: #171719;
-		--darker-bg-col: #121214;
-		--box-bg-color: #222226;
-		--primary-col: #ff004d;
+
+		--color-text-primary: var(--color-surface-100);
+		--color-text-secondary: var(--color-surface-300);
+		--color-text-dimmed: var(--color-surface-400);
+
+		--color-primary-50: #ffd9e4;
+		--color-primary-100: #ffccdb;
+		--color-primary-200: #ffbfd3;
+		--color-primary-300: #ff99b8;
+		--color-primary-400: #ff4d82;
+		--color-primary-500: #ff004d;
+		--color-primary-600: #e60045;
+		--color-primary-700: #bf003a;
+		--color-primary-800: #99002e;
+		--color-primary-900: #7d0026;
+
+		--color-surface-50: #dedede;
+		--color-surface-100: #d2d2d3;
+		--color-surface-200: #c7c7c8;
+		--color-surface-300: #a6a6a7;
+		--color-surface-400: #636366;
+		--color-surface-500: #202024;
+		--color-surface-600: #1d1d20;
+		--color-surface-700: #18181b;
+		--color-surface-800: #131316;
+		--color-surface-900: #101012;
 	}
 	:global(*) {
 		box-sizing: border-box;
@@ -69,7 +89,7 @@
 		overflow-x: hidden;
 	}
 	:global(body) {
-		background-color: var(--bg-col);
+		background-color: var(--color-surface-900);
 		display: flex;
 		justify-content: center;
 	}
@@ -78,8 +98,8 @@
 		text-decoration: none;
 	}
 	:global(::selection) {
-		background-color: #cf003f;
-		color: var(--text-col);
+		background-color: var(--color-primary-700);
+		color: var(--color-text-primary);
 	}
 	main {
 		z-index: 1;

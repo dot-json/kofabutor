@@ -26,13 +26,13 @@
 		<div class="hero_side">
 			<div class="pictures_wrapper">
 				<div class="picture_frame frame1">
-					<img src="/images/products/bathroom.jpeg" alt="furdo" class="picture" />
+					<img src="/images/products/bathroom.jpeg" alt="furdo" class="picture" draggable="false" />
 				</div>
 				<div class="picture_frame frame2">
-					<img src="/images/products/kitchen.jpeg" alt="konyha" class="picture" />
+					<img src="/images/products/kitchen.jpeg" alt="konyha" class="picture" draggable="false" />
 				</div>
 				<div class="picture_frame frame3">
-					<img src="/images/products/gift.png" alt="ajandek" class="picture" />
+					<img src="/images/products/gift.png" alt="ajandek" class="picture" draggable="false" />
 				</div>
 			</div>
 		</div>
@@ -44,11 +44,6 @@
 				Minőségi bútorokat szeretne, amelyek maximálisan az Ön igényei szerint készülnek, a lehető
 				legnagyobb gondossággal? Akkor a legjobb helyen jár!
 			</p>
-			<!-- <div class="intro_separator" />
-		<p class="intro_section_p">
-			A KOFA Bútornál folyamatosan azon dolgozunk, hogy az ügyfeleinkkel közösen megálmodott bútorok
-			valósággá váljanak, és a végeredmény lenyűgözze megrendelőinket.
-		</p> -->
 			<div class="intro_separator" />
 			<p class="intro_section_p">
 				Szakértelmünkre az igényfelméréstől az átadásig mindenben számíthat! A legspeciálisabb
@@ -84,7 +79,7 @@
 		font-family: 'Inter', sans-serif;
 		font-weight: 700;
 		font-size: 3.6rem;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		margin-top: 1rem;
 		margin-bottom: 2rem;
 	}
@@ -92,7 +87,7 @@
 		font-family: 'Inter', sans-serif;
 		font-weight: 500;
 		font-size: 2rem;
-		color: var(--sec-text-col);
+		color: var(--color-text-secondary);
 	}
 	.hero_icons_wrapper {
 		display: flex;
@@ -109,14 +104,14 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		color: #525252;
+		color: var(--color-surface-400);
 	}
 	.hero_icon_arrow {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 50%;
-		color: #494949;
+		color: var(--color-surface-400);
 		margin: 0 1rem;
 	}
 	.pictures_wrapper {
@@ -131,7 +126,7 @@
 		transform: translate(-50%, -50%);
 		width: 22rem;
 		height: 16rem;
-		outline: 2px solid var(--sec-text-col);
+		outline: 2px solid var(--color-text-secondary);
 		overflow: hidden;
 		box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.86);
 		-webkit-box-shadow: 0px 0px 26px 5px rgba(0, 0, 0, 0.86);
@@ -171,19 +166,19 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 4rem;
 		font-weight: 700;
-		color: var(--text-col);
+		color: var(--color-text-primary);
 		margin-bottom: 2.5rem;
 	}
 	.intro_section_p {
 		font-family: 'Inter', sans-serif;
 		font-size: 1.6rem;
 		font-weight: 500;
-		color: var(--sec-text-col);
+		color: var(--color-text-secondary);
 		max-width: 40ch;
 	}
 	.intro_separator {
 		width: 24rem;
-		border-bottom: 1px solid #525252;
+		border-bottom: 1px solid var(--color-surface-400);
 		margin: 1.5rem 0;
 	}
 	.intro_image_wrapper {
@@ -194,7 +189,7 @@
 	.placeholder {
 		width: 30rem;
 		height: 30rem;
-		border: 1px solid #525252;
+		border: 1px solid var(--color-surface-400);
 	}
 
 	@media screen and (max-width: 1440px) {
@@ -233,7 +228,7 @@
 		.placeholder {
 			width: 25rem;
 			height: 25rem;
-			border: 1px solid #525252;
+			border: 1px solid var(--color-surface-400);
 		}
 	}
 	@media screen and (max-width: 1140px) {
@@ -320,7 +315,7 @@
 		.placeholder {
 			width: 20rem;
 			height: 20rem;
-			border: 1px solid #525252;
+			border: 1px solid var(--color-surface-400);
 		}
 	}
 </style>
