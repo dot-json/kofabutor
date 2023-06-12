@@ -31,10 +31,9 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		min-height: 40rem;
 		flex: 1;
 		width: 80%;
-		padding: 4rem 0rem;
+		padding: 0rem 0rem;
 	}
 	.title {
 		font-family: 'Inter', sans-serif;

@@ -2,6 +2,7 @@
 	import { onMount, setContext } from 'svelte';
 	import Firstload from '../components/firstload.svelte';
 	import Navigation from '../components/navigation.svelte';
+	import Footer from '../components/footer.svelte';
 
 	let window_width = 0;
 	let root: HTMLElement | undefined;
@@ -48,6 +49,7 @@
 <Navigation {window_width} {isOpen} {setOpen} />
 <main>
 	<slot />
+	<Footer />
 </main>
 
 <style>
@@ -109,17 +111,16 @@
 		width: 100%;
 		min-height: 100vh;
 		max-width: 1920px;
-		padding: 10rem 4rem 5rem 4rem;
+		padding: 10rem 4rem 2rem 4rem;
 	}
 	@media screen and (max-width: 1380px) {
 		main {
-			padding: 6rem 4rem 4rem 4rem;
+			padding: 6rem 4rem 2rem 4rem;
 		}
 	}
 	@media screen and (max-width: 800px) {
 		main {
-			min-height: auto;
-			padding: 5rem 2rem 4rem 2rem;
+			padding: 5rem 2rem 2rem 2rem;
 		}
 	}
 </style>

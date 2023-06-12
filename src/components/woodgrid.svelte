@@ -121,7 +121,7 @@
 		}
 		.desc {
 			font-size: 1.125rem;
-			padding-top: 1rem;
+			padding-top: 0.75rem;
 		}
 	}
 </style>
