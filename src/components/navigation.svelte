@@ -65,34 +65,48 @@
 </script>
 
 {#if window_width != 0}
-	<header class:header_scrolled={isScrolled && !isOpen} in:fade>
-		<nav>
-			{#if window_width > 800}
-				<a class="icon_wrapper" href="/" on:click={isOpen ? lSetOpen : () => {}}><Home /></a>
+	<header
+		class="z-10 fixed top-0 left-0 flex justify-center w-full bg-zinc-900 px-6 py-2 md:px-8 md:py-4 xl:px-16 xl:py-12 transition-all ease-in-out"
+		in:fade
+	>
+		<nav class="flex items-center justify-between w-full max-w-[112rem] h-16">
+			{#if window_width > 768}
+				<a
+					class="z-10 flex justify-center items-center h-12 w-12 text-zinc-100 transition-colors ease-in-out duration-200 cursor-pointer hover:text-primary-500"
+					href="/"
+					on:click={isOpen ? lSetOpen : () => {}}><Home /></a
+				>
 			{/if}
-			<div class="title_wrapper">
-				{#if window_width > 800}
-					<div class="logo_wrapper">
+			<div class="z-10 flex h-full items-center">
+				{#if window_width > 768}
+					<div class="flex items-center justify-center h-full w-32 py-0 text-zinc-100">
 						<Logo />
 					</div>
-					<div class="title_inner_wrapper">
-						<div class="divider" />
-						<span class="title">KOFA</span>
+					<div class="h-full border-r-[1px] border-r-zinc-400 mx-2" />
+					<div class="flex items-center justify-around h-full flex-1 w-32">
+						<span class="text-[2.75rem] font-bold select-none">KOFA</span>
 					</div>
 				{:else}
-					<a class="logo_wrapper" href="/" on:click={isOpen ? lSetOpen : () => {}}>
+					<a
+						class="z-10 flex justify-center items-center h-20 w-20 text-zinc-100"
+						href="/"
+						on:click={isOpen ? lSetOpen : () => {}}
+					>
 						<Logo />
 					</a>
 				{/if}
 			</div>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="icon_wrapper" on:click={lSetOpen}>
+			<div
+				class="z-10 flex justify-center items-center h-12 w-12 text-zinc-100 transition-colors ease-in-out duration-200 cursor-pointer hover:text-primary-500"
+				on:click={lSetOpen}
+			>
 				{#if isOpen}
-					<div class="icon" in:fade>
+					<div class="z-10 flex justify-center items-center w-full h-full" in:fade>
 						<X />
 					</div>
 				{:else}
-					<div class="icon" in:fade>
+					<div class="z-10 flex justify-center items-center w-full h-full" in:fade>
 						<Bars />
 					</div>
 				{/if}
@@ -101,275 +115,41 @@
 	</header>
 {/if}
 {#if isOpen}
-	<div class="menu_wrapper" in:fade={{ duration: 220 }} out:fade={{ duration: 220, delay: 670 }}>
-		<div class="menu_container">
-			<ul class="menu_ul">
+	<div
+		class="z-[9] fixed flex justify-center top-0 left-0 w-screen h-screen bg-zinc-900"
+		in:fade={{ duration: 200 }}
+		out:fade={{ duration: 200, delay: 670 }}
+	>
+		<div class="relative flex flex-col items-center w-full h-full pt-24 max-w-[112rem]">
+			<ul
+				class="z-10 sm:absolute sm:top-32 xl:top-48 right-8 xl:right-20 flex flex-col items-end w-full px-8 md:px-0 md:w-fit gap-4 sm:gap-8 xl:gap-10 list-none"
+			>
 				{#each pages as page, i}
 					<li
-						class="menu_li"
+						class="flex items-center w-full sm:w-[35rem] xl:w-[43rem] border-b-[1px] border-b-zinc-600"
 						in:fly={{ delay: 125 * (i + 1), duration: 250, x: 300, easing: cubicInOut }}
 						out:fly={{ delay: 125 * i, duration: 250, x: 200, easing: cubicInOut }}
 					>
-						<span class="menu_li_id">0{i}</span>
-						<div class="menu_li_line" />
-						<a class="menu_link" href={page.path} on:click={isOpen ? lSetOpen : () => {}}
-							>{page.dest}</a
+						<span class="font-light text-4xl sm:text-5xl xl:text-6xl text-zinc-500">0{i}</span>
+						<div class="grow border-b-[1px] border-dashed border-b-zinc-500 mx-2" />
+						<a
+							class="cursor-pointer text-zinc-200 font-medium text-3xl sm:text-5xl xl:text-6xl uppercase whitespace-nowrap transition-all duration-200 ease-in-out hover:text-primary-500 hover:tracking-wide"
+							href={page.path}
+							on:click={isOpen ? lSetOpen : () => {}}>{page.dest}</a
 						>
 					</li>
 				{/each}
 			</ul>
 			<div
-				class="menu_wm_wrapper"
+				class="sm:absolute flex h-fit my-auto sm:my-0 sm:bottom-8 sm:left-8 xl:bottom-20 xl:left-20"
 				in:fly={{ duration: 350, delay: 250, y: 200, easing: cubicInOut }}
 				out:fly={{ duration: 350, delay: 250, y: 200, easing: cubicInOut }}
 			>
-				<span class="menu_wm" bind:this={wm}>KOFA</span>
+				<span
+					class="font-extrabold text-zinc-800 text-[8rem] sm:text-[12rem] xl:text-[15rem] leading-[0.85em] select-none"
+					bind:this={wm}>KOFA</span
+				>
 			</div>
 		</div>
 	</div>
 {/if}
-
-<style>
-	header {
-		z-index: 11;
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		top: 0;
-		left: 50%;
-		background-color: var(--color-surface-900);
-		transform: translateX(-50%);
-		padding: 3rem 4rem;
-		transition: padding 300ms ease, box-shadow 200ms ease, border-bottom 200ms ease;
-	}
-	.header_scrolled {
-		padding: 1rem 4rem;
-		box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.12);
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		width: 100%;
-		max-width: 112rem;
-		height: 4rem;
-	}
-	.icon_wrapper {
-		z-index: 11;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 3rem;
-		width: 3rem;
-		cursor: pointer;
-		color: var(--color-text-primary);
-		transition: color 200ms ease;
-	}
-	.icon_wrapper:hover {
-		color: var(--color-primary-500);
-	}
-	.icon {
-		z-index: 11;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 100%;
-	}
-	.title_wrapper {
-		z-index: 11;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		width: 18rem;
-	}
-	.logo_wrapper {
-		height: 100%;
-		width: 8rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: var(--color-text-primary);
-		transition: all 200ms ease;
-	}
-	.title_inner_wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		height: 100%;
-		flex: 1;
-	}
-	.divider {
-		height: 100%;
-		border-right: 1px solid var(--color-surface-400);
-	}
-	.title {
-		font-family: 'Inter', sans-serif;
-		font-weight: 700;
-		font-size: 2.8rem;
-		width: 8rem;
-		text-align: center;
-		color: var(--color-text-primary);
-		user-select: none;
-	}
-	.menu_wrapper {
-		z-index: 9;
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: var(--color-surface-900);
-	}
-	.menu_container {
-		z-index: inherit;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		padding-top: 8rem;
-		max-width: 1920px;
-		background-color: var(--color-surface-900);
-	}
-	.menu_ul {
-		z-index: 10;
-		position: absolute;
-		top: 12rem;
-		right: 5rem;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		width: fit-content;
-		gap: 2.25rem;
-		list-style: none;
-	}
-	.menu_link {
-		cursor: pointer;
-		width: fit-content;
-		transition: color 200ms ease, letter-spacing 200ms ease;
-	}
-	.menu_link:hover {
-		color: var(--color-primary-500);
-		letter-spacing: 0.025rem;
-	}
-	.menu_li {
-		display: flex;
-		align-items: center;
-		width: 40rem;
-		font-family: 'Inter', sans-serif;
-		font-weight: 500;
-		font-size: 3.4rem;
-		color: var(--color-text-primary);
-		text-transform: uppercase;
-		white-space: nowrap;
-		border-bottom: 1px solid var(--color-surface-500);
-		user-select: none;
-	}
-	.menu_li_id {
-		font-family: 'Inter', sans-serif;
-		font-weight: 300;
-		font-size: 3.4rem;
-		color: var(--color-surface-400);
-	}
-	.menu_li_line {
-		flex-grow: 1;
-		border-bottom: 1px dashed var(--color-surface-400);
-		margin: 0 0.5rem;
-	}
-	.menu_wm_wrapper {
-		position: absolute;
-		display: flex;
-		height: fit-content;
-		bottom: 5rem;
-		left: 5rem;
-	}
-	.menu_wm {
-		font-family: 'Inter', sans-serif;
-		font-weight: 800;
-		font-size: 15rem;
-		color: var(--color-surface-700);
-		line-height: 0.85em;
-		user-select: none;
-	}
-
-	@media screen and (max-width: 1380px) {
-		header {
-			padding: 1rem 2rem;
-		}
-		.menu_ul {
-			top: 7rem;
-			right: 4rem;
-			gap: 1.75rem;
-		}
-		.menu_li {
-			width: 30rem;
-			font-size: 2.6rem;
-		}
-		.menu_li_id {
-			font-size: 2.2rem;
-		}
-		.menu_wm_wrapper {
-			bottom: 4rem;
-			left: 4rem;
-		}
-		.menu_wm {
-			font-size: 10rem;
-		}
-	}
-	@media screen and (max-width: 800px) {
-		header {
-			padding: 0.5rem 1.5rem;
-		}
-		.title_wrapper {
-			width: 5rem;
-		}
-		.logo_wrapper {
-			height: 80%;
-			width: auto;
-		}
-		.menu_ul {
-			gap: 1.5rem;
-			position: initial;
-			transform: none;
-		}
-		.menu_li {
-			font-size: 2rem;
-			width: calc(100vw - 4rem);
-		}
-		.menu_li_id {
-			font-size: 2rem;
-		}
-		.menu_wm_wrapper {
-			position: initial;
-			margin: auto 0;
-		}
-		.menu_wm {
-			font-size: clamp(2rem, 30vw, 10rem);
-		}
-		.header_scrolled {
-			padding: 0.5rem 1.5rem;
-		}
-	}
-	@media screen and (max-width: 400px) {
-		.menu_li {
-			font-size: 1.4rem;
-		}
-		.menu_li_id {
-			font-size: 1.4rem;
-		}
-	}
-	@media (hover: none) {
-		.icon_wrapper:hover {
-			color: var(--color-text-primary);
-		}
-		.menu_link:hover {
-			color: var(--color-text-primary);
-		}
-	}
-</style>

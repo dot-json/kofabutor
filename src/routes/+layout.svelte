@@ -1,8 +1,14 @@
 <script lang="ts">
+	import '../app.css';
+
 	import { onMount, setContext } from 'svelte';
 	import Firstload from '../components/firstload.svelte';
 	import Navigation from '../components/navigation.svelte';
 	import Footer from '../components/footer.svelte';
+	import { fade } from 'svelte/transition';
+	import { quartInOut } from 'svelte/easing';
+
+	export let data;
 
 	let window_width = 0;
 	let root: HTMLElement | undefined;
@@ -43,44 +49,24 @@
 	/>
 </svelte:head>
 
-{#if firstLoad}
-	<Firstload />
-{/if}
 <Navigation {window_width} {isOpen} {setOpen} />
-<main>
-	<slot />
-	<Footer />
-</main>
+{#key data.url}
+	<main
+		in:fade={{ duration: 200, easing: quartInOut }}
+		class="flex flex-col items-center w-full px-6 lg:px-8 xl:px-16"
+	>
+		<div
+			class="flex flex-col items-center min-h-screen pt-20 md:pt-24 xl:pt-40 w-full max-w-screen-2xl"
+		>
+			<slot />
+			<Footer />
+		</div>
+	</main>
+{/key}
 
 <style>
 	:root {
-		--max-width: 1100px;
-
-		--color-text-primary: var(--color-surface-100);
-		--color-text-secondary: var(--color-surface-300);
-		--color-text-dimmed: var(--color-surface-400);
-
-		--color-primary-50: #ffd9e4;
-		--color-primary-100: #ffccdb;
-		--color-primary-200: #ffbfd3;
-		--color-primary-300: #ff99b8;
-		--color-primary-400: #ff4d82;
-		--color-primary-500: #ff004d;
-		--color-primary-600: #e60045;
-		--color-primary-700: #bf003a;
-		--color-primary-800: #99002e;
-		--color-primary-900: #7d0026;
-
-		--color-surface-50: #dedede;
-		--color-surface-100: #d2d2d3;
-		--color-surface-200: #c7c7c8;
-		--color-surface-300: #a6a6a7;
-		--color-surface-400: #636366;
-		--color-surface-500: #202024;
-		--color-surface-600: #1d1d20;
-		--color-surface-700: #18181b;
-		--color-surface-800: #131316;
-		--color-surface-900: #101012;
+		color-scheme: dark;
 	}
 	:global(*) {
 		box-sizing: border-box;
@@ -91,36 +77,12 @@
 		overflow-x: hidden;
 	}
 	:global(body) {
-		background-color: var(--color-surface-900);
+		background-color: #18181b;
 		display: flex;
 		justify-content: center;
 	}
-	:global(a) {
-		color: inherit;
-		text-decoration: none;
-	}
 	:global(::selection) {
-		background-color: var(--color-primary-700);
-		color: var(--color-text-primary);
-	}
-	main {
-		z-index: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		min-height: 100vh;
-		max-width: 1920px;
-		padding: 10rem 4rem 2rem 4rem;
-	}
-	@media screen and (max-width: 1380px) {
-		main {
-			padding: 6rem 4rem 2rem 4rem;
-		}
-	}
-	@media screen and (max-width: 800px) {
-		main {
-			padding: 5rem 2rem 2rem 2rem;
-		}
+		background-color: #bf003a;
+		color: #e4e4e7;
 	}
 </style>
