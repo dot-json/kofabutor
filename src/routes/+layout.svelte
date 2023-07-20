@@ -34,7 +34,7 @@
 		setTimeout(() => {
 			firstLoad = false;
 			if (root) root.style.overflow = 'initial';
-		}, 1800);
+		}, 1600);
 	});
 
 	setContext('window_width', window_width);
@@ -49,6 +49,9 @@
 	/>
 </svelte:head>
 
+{#if firstLoad}
+	<Firstload />
+{/if}
 <Navigation {window_width} {isOpen} {setOpen} />
 {#key data.url}
 	<main

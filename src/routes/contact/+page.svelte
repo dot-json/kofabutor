@@ -4,7 +4,7 @@
 <svelte:head>
 	<title>KOFA | Kapcsolat</title>
 </svelte:head>
-<div class="flex flex-initial sm:flex-1 flex-col xl:justify-center w-full py-8">
+<div class="flex flex-initial sm:flex-1 flex-col xl:justify-center w-full py-4 sm:py-8">
 	<h1
 		class="text-4xl leading-tight md:text-6xl md:leading-tight lg:text-7xl lg:leading-tight xl:text-8xl xl:leading-tight font-semibold mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-zinc-100 select-none max-w-[20ch]"
 	>

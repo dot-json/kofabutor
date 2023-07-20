@@ -1,127 +1,49 @@
-<div class="grid">
-	<div class="tile">
-		<div class="titlebox">
-			<img src="/images/woods/ash.jpg" alt="ash" class="image" draggable="false" />
-			<h3 class="title">Kőrisfa</h3>
+<div
+	class="grid grid-cols-1 xl:grid-cols-3 w-full max-w-screen-sm xl:max-w-screen-xl gap-1 rounded-xl overflow-hidden"
+>
+	<div class="flex flex-col bg-zinc-800 h-fit md:h-56 xl:h-72 p-6 md:p-7 xl:p-8">
+		<div class="flex items-center gap-6">
+			<img
+				src="/images/woods/ash.jpg"
+				alt="ash"
+				class="w-14 h-14 md:w-16 md:h-16 xl:w-20 xl:h-20 object-cover rounded-lg select-none"
+				draggable="false"
+			/>
+			<h3 class="text-2xl md:text-3xl xl:text-4xl font-semibold text-zinc-100">Kőrisfa</h3>
 		</div>
-		<p class="desc">
+		<p class="text-lg md:text-xl font-medium text-zinc-300 pt-3 md:pt-4">
 			A kőrisek anyaga igen erős, de rugalmas keményfa, a közepesen nehéz fák közé tartozik.
 			Hasadékonyság szempontjából nehezen hasad.
 		</p>
 	</div>
-	<div class="tile">
-		<div class="titlebox">
-			<img src="/images/woods/mahagony.jpg" alt="mahagony" class="image" draggable="false" />
-			<h3 class="title">Mahagóni</h3>
+	<div class="flex flex-col bg-zinc-800 h-fit md:h-56 xl:h-72 p-6 md:p-7 xl:p-8">
+		<div class="flex items-center gap-6">
+			<img
+				src="/images/woods/mahagony.jpg"
+				alt="mahagony"
+				class="w-14 h-14 md:w-16 md:h-16 xl:w-20 xl:h-20 object-cover rounded-lg select-none"
+				draggable="false"
+			/>
+			<h3 class="text-2xl md:text-3xl xl:text-4xl font-semibold text-zinc-100">Mahagóni</h3>
 		</div>
-		<p class="desc">
+		<p class="text-lg md:text-xl font-medium text-zinc-300 pt-3 md:pt-4">
 			A textúra a váltakozóan csavarodó növés miatt a megvilágítástól függően fénycsíkokat mutat,
 			aranyszínűen fénylik.
 		</p>
 	</div>
-	<div class="tile">
-		<div class="titlebox">
-			<img src="/images/woods/oak.jpg" alt="oak" class="image" draggable="false" />
-			<h3 class="title">Tölgyfa</h3>
+	<div class="flex flex-col bg-zinc-800 h-fit md:h-56 xl:h-72 p-6 md:p-7 xl:p-8">
+		<div class="flex items-center gap-6">
+			<img
+				src="/images/woods/oak.jpg"
+				alt="oak"
+				class="w-14 h-14 md:w-16 md:h-16 xl:w-20 xl:h-20 object-cover rounded-lg select-none"
+				draggable="false"
+			/>
+			<h3 class="text-2xl md:text-3xl xl:text-4xl font-semibold text-zinc-100">Tölgyfa</h3>
 		</div>
-		<p class="desc">
+		<p class="text-lg md:text-xl font-medium text-zinc-300 pt-3 md:pt-4">
 			Tartós ipari fa, amiből egyaránt készítenek bútorokat, hordókat, parkettát. Csersavtartalma
 			miatt biológiai ellenállóképessége is jó.
 		</p>
 	</div>
-	<div class="tile" />
-	<div class="tile" />
-	<div class="tile" />
 </div>
-
-<style>
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		width: 100%;
-		max-width: 80rem;
-		grid-gap: 0.125rem;
-		border-radius: 1rem;
-		overflow: hidden;
-	}
-	.tile {
-		display: flex;
-		flex-direction: column;
-		background-color: var(--color-surface-700);
-		height: 18rem;
-		padding: 2rem;
-	}
-	.titlebox {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		height: fit-content;
-		gap: 1.5rem;
-	}
-	.title {
-		font-family: 'Inter', sans-serif;
-		font-size: 2.25rem;
-		font-weight: 600;
-		color: var(--color-text-primary);
-	}
-	.image {
-		width: 5rem;
-		height: 5rem;
-		object-fit: cover;
-		border-radius: 0.5rem;
-		user-select: none;
-	}
-	.desc {
-		font-family: 'Inter', sans-serif;
-		font-size: 1.2rem;
-		font-weight: 500;
-		color: var(--color-text-secondary);
-		padding-top: 1rem;
-	}
-	@media screen and (max-width: 1144px) {
-		.grid {
-			max-width: 54rem;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(3, 1fr);
-		}
-		.tile {
-			padding: 1.75rem;
-			height: 17rem;
-		}
-		.image {
-			width: 4rem;
-			height: 4rem;
-		}
-		.title {
-			font-size: 1.75rem;
-			font-weight: 600;
-		}
-	}
-	@media screen and (max-width: 800px) {
-		.tile {
-			height: 14rem;
-			padding: 1.5rem;
-		}
-		.grid {
-			max-width: 22rem;
-			grid-template-columns: repeat(1, 1fr);
-			grid-template-rows: repeat(6, 1fr);
-		}
-		.titlebox {
-			gap: 1.25rem;
-		}
-		.image {
-			width: 3.5rem;
-			height: 3.5rem;
-		}
-		.title {
-			font-size: 1.6rem;
-			font-weight: 600;
-		}
-		.desc {
-			font-size: 1.125rem;
-			padding-top: 0.75rem;
-		}
-	}
-</style>

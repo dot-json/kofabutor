@@ -24,312 +24,178 @@
 </svelte:head>
 
 <Transition>
-	<h1 class="title">Hogyan zajlik a velünk való együttműködés?</h1>
-	<section>
-		{#if window_width > 1144}
-			<div class="tl_line" />
-			<div class="tl_row">
-				<div class="tl_left">
-					<div class="tl_textbox">
-						<span class="tl_step_title">1 - Igényfelmérés</span>
-						<span class="tl_step_text">
+	<h1
+		class="text-[2.125rem] leading-snug sm:text-5xl lg:text-6xl font-semibold text-zinc-100 text-center mt-4 mb-8 md:mb-12 lg:mt-8 lg:mb-20"
+	>
+		Hogyan zajlik a velünk való együttműködés?
+	</h1>
+	<section class="relative flex flex-col items-center w-full min-h-[32rem] gap-8 xl:gap-0">
+		{#if window_width > 1280}
+			<div
+				class="z-[1] absolute top-0 left-[calc(50%-0.125rem)] w-1 h-full bg-zinc-700 rounded-xl"
+			/>
+			<div class="flex items-center w-[65rem] max-w-sreen-2xl h-52">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-end justify-center">
+					<div class="flex flex-col w-[27rem] py-4 px-8 rounded-xl bg-zinc-800">
+						<span class="text-3xl font-semibold text-zinc-100 mb-4">1 - Igényfelmérés</span>
+						<span class="text-xl font-normal text-zinc-200">
 							Közösen megbeszéljük, hogy az elképzeléseket és a lehetőségeket figyelembe véve milyen
 							lenne az Ön számára ideális bútor.
 						</span>
 					</div>
 				</div>
-				<div class="tl_middle">
-					<div class="tl_middle_dot" />
-					<div class="tl_vline" />
+				<div class="relative z-[2] fkex justify-center items-center h-full w-[10%] text-zinc-100">
+					<div
+						class="z-[1] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-zinc-500 rounded-full"
+					/>
+					<div class="-z-[1] absolute top-1/2 -translate-y-1/2 w-full h-0.5 bg-zinc-500" />
 				</div>
-				<div class="tl_right">
-					<div class="tl_iconbox">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-start justify-center">
+					<div
+						class="flex justify-center items-center p-8 w-32 h-32 text-zinc-100 rounded-xl bg-zinc-800"
+					>
 						<Paper />
 					</div>
 				</div>
 			</div>
-			<div class="tl_row">
-				<div class="tl_left">
-					<div class="tl_iconbox">
+			<div class="flex items-center w-[65rem] max-w-sreen-2xl h-52">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-end justify-center">
+					<div
+						class="flex justify-center items-center p-8 w-32 h-32 text-zinc-100 rounded-xl bg-zinc-800"
+					>
 						<Price />
 					</div>
 				</div>
-				<div class="tl_middle">
-					<div class="tl_middle_dot" />
-					<div class="tl_vline" />
+				<div class="relative z-[2] fkex justify-center items-center h-full w-[10%] text-zinc-100">
+					<div
+						class="z-[1] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-zinc-500 rounded-full"
+					/>
+					<div class="-z-[1] absolute top-1/2 -translate-y-1/2 w-full h-0.5 bg-zinc-500" />
 				</div>
-				<div class="tl_right">
-					<div class="tl_textbox">
-						<span class="tl_step_title">2 - Tervezés és árajánlat</span>
-						<span class="tl_step_text">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-start justify-center">
+					<div class="flex flex-col w-[27rem] py-4 px-8 rounded-xl bg-zinc-800">
+						<span class="text-3xl font-semibold text-zinc-100 mb-4">2 - Tervezés és árajánlat</span>
+						<span class="text-xl font-normal text-zinc-200">
 							Korszerű programokkal elkészítjük leendő bútorai látványtervét, és a projekt mindent
 							magában foglaló vállalási díjával együtt eljuttatjuk Önnek.
 						</span>
 					</div>
 				</div>
 			</div>
-			<div class="tl_row">
-				<div class="tl_left">
-					<div class="tl_textbox">
-						<span class="tl_step_title">3 - Gyártás</span>
-						<span class="tl_step_text">
+			<div class="flex items-center w-[65rem] max-w-sreen-2xl h-52">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-end justify-center">
+					<div class="flex flex-col w-[27rem] py-4 px-8 rounded-xl bg-zinc-800">
+						<span class="text-3xl font-semibold text-zinc-100 mb-4">3 - Gyártás</span>
+						<span class="text-xl font-normal text-zinc-200">
 							A termék készítése során folyamatosan konzultálunk ügyfeleinkkel, és megoldjuk a menet
 							közben felvetőtő módosítási kéréseiket is.
 						</span>
 					</div>
 				</div>
-				<div class="tl_middle">
-					<div class="tl_middle_dot" />
-					<div class="tl_vline" />
+				<div class="relative z-[2] fkex justify-center items-center h-full w-[10%] text-zinc-100">
+					<div
+						class="z-[1] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-zinc-500 rounded-full"
+					/>
+					<div class="-z-[1] absolute top-1/2 -translate-y-1/2 w-full h-0.5 bg-zinc-500" />
 				</div>
-				<div class="tl_right">
-					<div class="tl_iconbox">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-start justify-center">
+					<div
+						class="flex justify-center items-center p-8 w-32 h-32 text-zinc-100 rounded-xl bg-zinc-800"
+					>
 						<Furniture />
 					</div>
 				</div>
 			</div>
-			<div class="tl_row">
-				<div class="tl_left">
-					<div class="tl_iconbox">
+			<div class="flex items-center w-[65rem] max-w-sreen-2xl h-52">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-end justify-center">
+					<div
+						class="flex justify-center items-center p-8 w-32 h-32 text-zinc-100 rounded-xl bg-zinc-800"
+					>
 						<Delivery />
 					</div>
 				</div>
-				<div class="tl_middle">
-					<div class="tl_middle_dot" />
-					<div class="tl_vline" />
+				<div class="relative z-[2] fkex justify-center items-center h-full w-[10%] text-zinc-100">
+					<div
+						class="z-[1] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-zinc-500 rounded-full"
+					/>
+					<div class="-z-[1] absolute top-1/2 -translate-y-1/2 w-full h-0.5 bg-zinc-500" />
 				</div>
-				<div class="tl_right">
-					<div class="tl_textbox">
-						<span class="tl_step_title">4 - Szállítás és szerelés</span>
-						<span class="tl_step_text">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-start justify-center">
+					<div class="flex flex-col w-[27rem] py-4 px-8 rounded-xl bg-zinc-800">
+						<span class="text-3xl font-semibold text-zinc-100 mb-4">4 - Szállítás és szerelés</span>
+						<span class="text-xl font-normal text-zinc-200">
 							Az ajánlatban vállalt határidőt betartva leszállítjuk a bútorokat a megrendelőinknek,
 							és gondoskodunk a szakszerű összeszerelésről is.
 						</span>
 					</div>
 				</div>
 			</div>
-			<div class="tl_row">
-				<div class="tl_left">
-					<div class="tl_textbox">
-						<span class="tl_step_title">5 - Átadás</span>
-						<span class="tl_step_text">
+			<div class="flex items-center w-[65rem] max-w-sreen-2xl h-52">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-end justify-center">
+					<div class="flex flex-col w-[27rem] py-4 px-8 rounded-xl bg-zinc-800">
+						<span class="text-3xl font-semibold text-zinc-100 mb-4">5 - Átadás</span>
+						<span class="text-xl font-normal text-zinc-200">
 							Ha a termék maradéktalanul megfelel Önnek, lezárjuk a projektet - bízva abban, hogy
 							rövidesen újabb bútorok elkészítésével bíz meg minket!
 						</span>
 					</div>
 				</div>
-				<div class="tl_middle">
-					<div class="tl_middle_dot" />
-					<div class="tl_vline" />
+				<div class="relative z-[2] fkex justify-center items-center h-full w-[10%] text-zinc-100">
+					<div
+						class="z-[1] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-zinc-500 rounded-full"
+					/>
+					<div class="-z-[1] absolute top-1/2 -translate-y-1/2 w-full h-0.5 bg-zinc-500" />
 				</div>
-				<div class="tl_right">
-					<div class="tl_iconbox">
+				<div class="flex flex-col w-[45%] min-h-[12rem] items-start justify-center">
+					<div
+						class="flex justify-center items-center p-8 w-32 h-32 text-zinc-100 rounded-xl bg-zinc-800"
+					>
 						<Tick />
 					</div>
 				</div>
 			</div>
 		{:else}
-			<div class="m_tl_step">
-				<span class="tl_step_title">1 - Igényfelmérés</span>
-				<span class="tl_step_text"
+			<div class="flex flex-col max-w-screen-sm min-h-[10rem] p-4 rounded-xl bg-zinc-800">
+				<span class="text-2xl font-semibold text-zinc-100 mb-2">1 - Igényfelmérés</span>
+				<span class="text-lg leading-snug font-medium text-zinc-300"
 					>Közösen megbeszéljük, hogy az elképzeléseket és a lehetőségeket figyelembe véve milyen
 					lenne az Ön számára ideális bútor.</span
 				>
 			</div>
-			<div class="m_tl_step">
-				<span class="tl_step_title">2 - Tervezés és árajánlat</span>
-				<span class="tl_step_text"
+			<div class="flex flex-col max-w-screen-sm min-h-[10rem] p-4 rounded-xl bg-zinc-800">
+				<span class="text-2xl font-semibold text-zinc-100 mb-2">2 - Tervezés és árajánlat</span>
+				<span class="text-lg leading-snug font-medium text-zinc-300"
 					>Korszerű programokkal elkészítjük leendő bútorai látványtervét, és a projekt mindent
 					magában foglaló vállalási díjával együtt eljuttatjuk Önnek.</span
 				>
 			</div>
-			<div class="m_tl_step">
-				<span class="tl_step_title">3 - Gyártás</span>
-				<span class="tl_step_text"
+			<div class="flex flex-col max-w-screen-sm min-h-[10rem] p-4 rounded-xl bg-zinc-800">
+				<span class="text-2xl font-semibold text-zinc-100 mb-2">3 - Gyártás</span>
+				<span class="text-lg leading-snug font-medium text-zinc-300"
 					>A termék készítése során folyamatosan konzultálunk ügyfeleinkkel, és megoldjuk a menet
 					közben felvetőtő módosítási kéréseiket is.</span
 				>
 			</div>
-			<div class="m_tl_step">
-				<span class="tl_step_title">4 - Szállítás és szerelés</span>
-				<span class="tl_step_text"
+			<div class="flex flex-col max-w-screen-sm min-h-[10rem] p-4 rounded-xl bg-zinc-800">
+				<span class="text-2xl font-semibold text-zinc-100 mb-2">4 - Szállítás és szerelés</span>
+				<span class="text-lg leading-snug font-medium text-zinc-300"
 					>Az ajánlatban vállalt határidőt betartva leszállítjuk a bútorokat a megrendelőinknek, és
 					gondoskodunk a szakszerű összeszerelésről is.</span
 				>
 			</div>
-			<div class="m_tl_step">
-				<span class="tl_step_title">5 - Átadás</span>
-				<span class="tl_step_text"
+			<div class="flex flex-col max-w-screen-sm min-h-[10rem] p-4 rounded-xl bg-zinc-800">
+				<span class="text-2xl font-semibold text-zinc-100 mb-2">5 - Átadás</span>
+				<span class="text-lg leading-snug font-medium text-zinc-300"
 					>Ha a termék maradéktalanul megfelel Önnek, lezárjuk a projektet - bízva abban, hogy
 					rövidesen újabb bútorok elkészítésével bíz meg minket!</span
 				>
 			</div>
 		{/if}
 	</section>
-	<section>
-		<h2 class="title title2">Fa választék</h2>
+	<section class="py-4 sm:py-8">
+		<h2 class="text-[2.125rem] sm:text-6xl font-semibold text-zinc-100 text-center my-8 sm:my-14">
+			Fa választék
+		</h2>
 		<Woodgrid />
 	</section>
 </Transition>
-
-<style>
-	.title {
-		font-family: 'Inter', sans-serif;
-		font-weight: 600;
-		font-size: clamp(3rem, 4vw, 4rem);
-		color: var(--color-text-primary);
-		margin: 2rem 0 5rem 0;
-		text-align: center;
-	}
-	.title2 {
-		margin-top: 5rem;
-	}
-	section {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		height: fit-content;
-		min-height: 32rem;
-	}
-	.tl_row {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		width: 65rem;
-		max-width: 1920px;
-		height: 12rem;
-	}
-	.tl_middle {
-		position: relative;
-		z-index: 2;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 10%;
-		color: var(--color-text-primary);
-	}
-	.tl_middle_dot {
-		z-index: 1;
-		position: absolute;
-		width: 1rem;
-		height: 1rem;
-		background-color: var(--color-surface-400);
-		border-radius: 50%;
-	}
-	.tl_line {
-		z-index: 1;
-		position: absolute;
-		top: 0;
-		left: calc(50% - 0.125rem);
-		width: 0.25rem;
-		height: 100%;
-		background-color: var(--color-surface-500);
-	}
-	.tl_vline {
-		z-index: -1;
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		background-color: var(--color-surface-400);
-	}
-	.tl_left {
-		display: flex;
-		flex-direction: column;
-		width: 45%;
-		min-height: 12rem;
-		height: fit-content;
-		align-items: flex-end;
-		justify-content: center;
-	}
-	.tl_right {
-		display: flex;
-		flex-direction: column;
-		width: 45%;
-		min-height: 12rem;
-		height: fit-content;
-		align-items: flex-start;
-		justify-content: center;
-	}
-	.tl_textbox {
-		display: flex;
-		flex-direction: column;
-		width: 27rem;
-		height: fit-content;
-		padding: 1rem 2rem;
-		border-radius: 0.5rem;
-		background-color: var(--color-surface-700);
-	}
-	.tl_iconbox {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 2rem;
-		width: 8rem;
-		height: 8rem;
-		color: var(--color-text-primary);
-		border-radius: 0.5rem;
-		background-color: var(--color-surface-700);
-	}
-	.tl_step_title {
-		font-family: 'Inter', sans-serif;
-		font-size: 1.8rem;
-		font-weight: 600;
-		color: var(--color-text-primary);
-		margin-bottom: 1rem;
-	}
-	.tl_step_text {
-		font-family: 'Inter', sans-serif;
-		font-size: 1.2rem;
-		font-weight: 400;
-		color: var(--color-text-primary);
-	}
-	.m_tl_step {
-		display: flex;
-		flex-direction: column;
-		max-width: 27rem;
-		min-height: 10rem;
-		padding: 1rem;
-		border-radius: 0.5rem;
-		background-color: var(--color-surface-700);
-	}
-
-	@media screen and (max-width: 1144px) {
-		section {
-			gap: 2rem;
-		}
-		.m_tl_step {
-			max-width: 32rem;
-		}
-		.title {
-			margin: 2rem 0 4rem 0;
-		}
-		.title2 {
-			margin-top: 4rem;
-			margin-bottom: 2rem;
-		}
-	}
-	@media screen and (max-width: 800px) {
-		.title {
-			font-size: 2rem;
-			margin: 2rem 0 3rem 0;
-		}
-		.title2 {
-			margin-top: 3rem;
-			margin-bottom: 1rem;
-			font-size: 2.25rem;
-		}
-		.tl_step_title {
-			font-size: 1.6rem;
-		}
-		.tl_step_text {
-			font-size: 1.1rem;
-		}
-		.m_tl_step {
-			max-width: 22rem;
-			min-height: initial;
-		}
-	}
-</style>

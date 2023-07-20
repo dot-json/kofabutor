@@ -66,7 +66,9 @@
 
 {#if window_width != 0}
 	<header
-		class="z-10 fixed top-0 left-0 flex justify-center w-full bg-zinc-900 px-6 py-2 md:px-8 md:py-4 xl:px-16 xl:py-12 transition-all ease-in-out"
+		class={`z-10 fixed top-0 left-0 flex justify-center w-full bg-zinc-900 px-6 md:px-8 xl:px-16 transition-all ease-in-out ${
+			isScrolled && !isOpen && window_width > 768 ? 'py-4' : 'py-2 md:py-4 xl:py-12'
+		} ${isScrolled && !isOpen && 'shadow-xl'}`}
 		in:fade
 	>
 		<nav class="flex items-center justify-between w-full max-w-[112rem] h-16">
@@ -122,7 +124,7 @@
 	>
 		<div class="relative flex flex-col items-center w-full h-full pt-24 max-w-[112rem]">
 			<ul
-				class="z-10 sm:absolute sm:top-32 xl:top-48 right-8 xl:right-20 flex flex-col items-end w-full px-8 md:px-0 md:w-fit gap-4 sm:gap-8 xl:gap-10 list-none"
+				class="z-10 sm:absolute sm:top-32 xl:top-48 right-8 xl:right-20 flex flex-col items-end w-full px-8 md:px-0 md:w-fit gap-6 sm:gap-8 xl:gap-10 list-none"
 			>
 				{#each pages as page, i}
 					<li

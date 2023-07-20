@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 </script>
 
 <svelte:head>
@@ -6,7 +7,7 @@
 </svelte:head>
 
 <section
-	class="flex flex-col md:gap-4 lg:flex-row max-w-2xl lg:max-w-none w-full py-4 md:py-12 lg:py-24 lg:gap-16 min-h-[36rem]"
+	class="flex flex-col md:gap-4 lg:flex-row max-w-2xl lg:max-w-none w-full py-4 md:py-12 lg:py-24 lg:gap-16 min-h-[38rem]"
 >
 	<div class="flex flex-col w-full lg:w-1/2">
 		<h1 class="font-bold mb-6 text-5xl leading-tight sm:text-6xl sm:leading-tight text-zinc-100">
@@ -18,6 +19,7 @@
 			Valami másodlagos dolog, ami jobban leírja a dolgokat.
 		</h2>
 	</div>
+	<div class="flex flex-col justify-center items-center w-full lg:w-1/2">a</div>
 </section>
 <section class="flex flex-col lg:flex-row gap-10 lg:gap-0 lg:max-w-none w-full py-24 max-w-2xl">
 	<div class="w-full lg:w-1/2">

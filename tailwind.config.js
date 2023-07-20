@@ -20,6 +20,29 @@ export default {
 		},
 		fontFamily: {
 			sans: ['Inter', 'sans-serif']
+		},
+		keyframes: {
+			firstLoad: {
+				'0%': {
+					opacity: '0',
+					height: '5rem'
+				},
+				'20%': {
+					opacity: '1',
+					height: '4rem'
+				},
+				'85%': {
+					opacity: '1',
+					height: '4rem'
+				},
+				'100%': {
+					opacity: '0',
+					height: '20vh'
+				}
+			}
+		},
+		animation: {
+			firstLoad: 'firstLoad 1.6s ease-in-out forwards'
 		}
 	},
 	future: {
