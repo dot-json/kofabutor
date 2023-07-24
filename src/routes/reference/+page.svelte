@@ -13,7 +13,7 @@
 </h1>
 <div class="flex flex-col items-center max-w-[58rem] gap-8 lg:gap-16">
 	<div
-		class="flex flex-col max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+		class="flex flex-col max-w-[28rem] gap-6 p-5 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
 	>
 		<div class="flex flex-col flex-1 w-full lg:w-[45%] p-0 lg:p-8">
 			<h2 class="font-semibold text-4xl text-zinc-100 mb-4">Konyhabútor</h2>
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<div
-		class="flex flex-col-reverse max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+		class="flex flex-col-reverse max-w-[28rem] gap-6 p-5 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
 	>
 		<div class="w-full lg:w-[55%] h-full object-cover lg:clip-refLeft">
 			<img
@@ -52,7 +52,7 @@
 		</div>
 	</div>
 	<div
-		class="flex flex-col max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+		class="flex flex-col max-w-[28rem] gap-6 p-5 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
 	>
 		<div class="flex flex-col flex-1 w-full lg:w-[45%] p-0 lg:p-8">
 			<h2 class="font-semibold text-4xl text-zinc-100 mb-4">Előszoba</h2>
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 	<div
-		class="flex flex-col-reverse max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+		class="flex flex-col-reverse max-w-[28rem] gap-6 p-5 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
 	>
 		<div class="w-full lg:w-[55%] h-full object-cover lg:clip-refLeft aspect-[4/3] lg:aspect-auto">
 			<img

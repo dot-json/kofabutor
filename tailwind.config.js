@@ -43,6 +43,12 @@ export default {
 		},
 		animation: {
 			firstLoad: 'firstLoad 1.6s ease-in-out forwards'
+		},
+		boxShadow: {
+			glow: '0 0 18px 8px rgba(255, 0, 77, 0.5)'
+		},
+		transitionProperty: {
+			glow: 'box-shadow, background-color, color'
 		}
 	},
 	future: {

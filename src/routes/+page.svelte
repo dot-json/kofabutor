@@ -12,7 +12,7 @@
 	<div class="flex flex-col w-full lg:w-1/2 2xl:w-3/5 py-0 2xl:py-12 lg:justify-between">
 		<div>
 			<h1
-				class="font-bold mb-6 text-5xl leading-tight lg:text-[3.875rem] xl:text-[4.25rem] sm:leading-tight text-zinc-100 max-w-[24ch]"
+				class="font-bold mb-6 text-[2.75rem] leading-tight lg:text-[3.875rem] xl:text-[4.25rem] sm:leading-tight text-zinc-100 max-w-[24ch]"
 			>
 				Egyedi bútorok, mérnöki pontossággal.
 			</h1>
@@ -24,12 +24,14 @@
 		</div>
 		<a
 			href="/contact"
-			class="relative flex justify-center items-center w-full mt-12 sm:mt-16 lg:mt-20 xl:mt-24 lg:mb-10 py-4 px-8 xl:py-6 xl:px-10 sm:w-fit bg-zinc-100 text-zinc-900 text-2xl xl:text-3xl font-semibold shadow-xl transition-colors ease-in-out duration-200 hover:bg-primary-500 hover:text-zinc-100"
+			class="relative flex justify-center items-center w-full mt-12 sm:mt-16 lg:mt-20 xl:mt-24 lg:mb-10 py-4 px-8 xl:py-6 xl:px-10 sm:w-fit bg-zinc-100 text-zinc-900 text-2xl xl:text-3xl font-semibold shadow-xl transition-glow ease-in-out duration-200 hover:bg-primary-500 hover:text-zinc-100 hover:shadow-glow"
 		>
 			Lépjünk kapcsolatba!
 		</a>
 	</div>
-	<div class="flex justify-center items-center w-full lg:w-1/2 2x:w-2/5 py-4 lg:py-12 2xl:py-24">
+	<div
+		class="flex justify-center items-center w-full lg:w-1/2 2x:w-2/5 py-4 lg:py-12 2xl:py-24 overflow-hidden"
+	>
 		<Carousel />
 	</div>
 </section>
