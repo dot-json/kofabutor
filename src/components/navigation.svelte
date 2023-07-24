@@ -66,7 +66,7 @@
 
 {#if window_width != 0}
 	<header
-		class={`z-10 fixed top-0 left-0 flex justify-center w-full bg-zinc-900 px-6 md:px-8 xl:px-16 transition-all ease-in-out ${
+		class={`z-10 fixed top-0 left-0 flex justify-center w-full bg-zinc-900 px-6 md:px-8 xl:px-16 transition-all ease-in-out duration-300 ${
 			isScrolled && !isOpen && window_width > 768 ? 'py-4' : 'py-2 md:py-4 xl:py-12'
 		} ${isScrolled && !isOpen && 'shadow-xl'}`}
 		in:fade
@@ -122,9 +122,11 @@
 		in:fade={{ duration: 200 }}
 		out:fade={{ duration: 200, delay: 670 }}
 	>
-		<div class="relative flex flex-col items-center w-full h-full pt-24 max-w-[112rem]">
+		<div
+			class="relative flex flex-col items-center w-full h-full pt-24 max-w-[112rem] mx-0 sm:mx-8 xl:mx-16"
+		>
 			<ul
-				class="z-10 sm:absolute sm:top-32 xl:top-48 right-8 xl:right-20 flex flex-col items-end w-full px-8 md:px-0 md:w-fit gap-6 sm:gap-8 xl:gap-10 list-none"
+				class="z-10 sm:absolute sm:top-32 xl:top-48 right-0 flex flex-col items-end w-full px-8 md:px-0 md:w-fit gap-6 sm:gap-8 xl:gap-10 list-none mr-0 sm:mr-2"
 			>
 				{#each pages as page, i}
 					<li
@@ -143,7 +145,7 @@
 				{/each}
 			</ul>
 			<div
-				class="sm:absolute flex h-fit my-auto sm:my-0 sm:bottom-8 sm:left-8 xl:bottom-20 xl:left-20"
+				class="sm:absolute flex h-fit my-auto sm:my-0 sm:bottom-8 xl:bottom-20 left-0"
 				in:fly={{ duration: 350, delay: 250, y: 200, easing: cubicInOut }}
 				out:fly={{ duration: 350, delay: 250, y: 200, easing: cubicInOut }}
 			>

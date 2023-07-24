@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import Carousel from '../components/carousel.svelte';
 </script>
 
 <svelte:head>
@@ -7,21 +7,35 @@
 </svelte:head>
 
 <section
-	class="flex flex-col md:gap-4 lg:flex-row max-w-2xl lg:max-w-none w-full py-4 md:py-12 lg:py-24 lg:gap-16 min-h-[38rem]"
+	class="relative flex flex-col gap-12 md:gap-16 lg:flex-row max-w-2xl lg:max-w-none w-full py-8 md:py-12 lg:py-16 lg:gap-16 min-h-[32rem] xl:min-h-[calc(100vh-10rem)]"
 >
-	<div class="flex flex-col w-full lg:w-1/2">
-		<h1 class="font-bold mb-6 text-5xl leading-tight sm:text-6xl sm:leading-tight text-zinc-100">
-			Egyedi bútorok, mérnöki pontossággal.
-		</h1>
-		<h2
-			class="font-normal text-2xl sm:text-2xl sm:leading-tight xl:text-4xl xl:leading-tight text-zinc-400"
+	<div class="flex flex-col w-full lg:w-1/2 2xl:w-3/5 py-0 2xl:py-12 lg:justify-between">
+		<div>
+			<h1
+				class="font-bold mb-6 text-5xl leading-tight lg:text-[3.875rem] xl:text-[4.25rem] sm:leading-tight text-zinc-100 max-w-[24ch]"
+			>
+				Egyedi bútorok, mérnöki pontossággal.
+			</h1>
+			<h2
+				class="font-normal text-xl lg:text-3xl lg:leading-tight xl:text-3xl xl:leading-tight text-zinc-400 max-w-[30ch]"
+			>
+				Valami másodlagos dolog, ami jobban leírja a dolgokat.
+			</h2>
+		</div>
+		<a
+			href="/contact"
+			class="relative flex justify-center items-center w-full mt-12 sm:mt-16 lg:mt-20 xl:mt-24 lg:mb-10 py-4 px-8 xl:py-6 xl:px-10 sm:w-fit bg-zinc-100 text-zinc-900 text-2xl xl:text-3xl font-semibold shadow-xl transition-colors ease-in-out duration-200 hover:bg-primary-500 hover:text-zinc-100"
 		>
-			Valami másodlagos dolog, ami jobban leírja a dolgokat.
-		</h2>
+			Lépjünk kapcsolatba!
+		</a>
 	</div>
-	<div class="flex flex-col justify-center items-center w-full lg:w-1/2">a</div>
+	<div class="flex justify-center items-center w-full lg:w-1/2 2x:w-2/5 py-4 lg:py-12 2xl:py-24">
+		<Carousel />
+	</div>
 </section>
-<section class="flex flex-col lg:flex-row gap-10 lg:gap-0 lg:max-w-none w-full py-24 max-w-2xl">
+<section
+	class="flex flex-col lg:flex-row gap-10 lg:gap-0 lg:max-w-none w-full py-8 md:py-12 lg:py-16 max-w-2xl"
+>
 	<div class="w-full lg:w-1/2">
 		<h2 class="font-bold text-5xl sm:text-6xl text-zinc-100 mb-4 sm:mb-8">Rólunk</h2>
 		<p class="text-lg md:text-2xl font-medium text-zinc-300 max-w-[40ch]">

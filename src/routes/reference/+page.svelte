@@ -6,168 +6,87 @@
 	<title>KOFA | Referenciák</title>
 </svelte:head>
 
-<Transition>
-	<h1 class="title">Eddigi megbízóinkkal készített bútoraink</h1>
-	<section>
-		<div class="box">
-			<div class="textbox">
-				<h2 class="boxtitle">Konyhabútor</h2>
-				<p class="boxparagraph">
-					Az általunk készített konyhabútorokban a minőségi alapanyagok, az igényes megmunkálás és a
-					praktikus helykihasználás találkoznak. Ha Ön is szeretné birtokba venni álmai
-					konyhabútorát, keressen minket még ma!
-				</p>
-			</div>
-			<img src="/images/products/kitchen.jpeg" alt="kitchen" class="image right" />
+<h1
+	class="text-[2.125rem] leading-snug sm:text-5xl lg:text-6xl font-semibold text-zinc-100 text-center mt-4 mb-8 md:mb-12 lg:mt-8 lg:mb-20"
+>
+	Eddigi megbízóinkkal készített bútoraink
+</h1>
+<div class="flex flex-col items-center max-w-[58rem] gap-8 lg:gap-16">
+	<div
+		class="flex flex-col max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+	>
+		<div class="flex flex-col flex-1 w-full lg:w-[45%] p-0 lg:p-8">
+			<h2 class="font-semibold text-4xl text-zinc-100 mb-4">Konyhabútor</h2>
+			<p class="font-normal text-xl lg:text-2xl text-zinc-300 leading-tight">
+				Az általunk készített konyhabútorokban a minőségi alapanyagok, az igényes megmunkálás és a
+				praktikus helykihasználás találkoznak. Ha Ön is szeretné birtokba venni álmai konyhabútorát,
+				keressen minket még ma!
+			</p>
 		</div>
-		<div class="box">
-			<img src="/images/products/bathroom.jpeg" alt="bathroom" class="image left" />
-			<div class="textbox">
-				<h2 class="boxtitle">Fürdőszoba</h2>
-				<p class="boxparagraph">
-					Egy valóban igényes bútor nemcsak praktikus kiegészítője egy fürdőszobának, hanem egyben a
-					dísze is! Amennyiben Ön is így gondolja, engedje meg, hogy megvalósítsuk az igényeire
-					szabott fürdőszobabútort!
-				</p>
-			</div>
+		<div class="w-full lg:w-[55%] h-full object-cover lg:clip-refRight aspect-[4/3] lg:aspect-auto">
+			<img
+				src="/images/products/kitchen.jpeg"
+				alt="kitchen"
+				class="w-full h-full rounded-2xl lg:rounded-none"
+				draggable="false"
+			/>
 		</div>
-		<div class="box">
-			<div class="textbox">
-				<h2 class="boxtitle">Előszoba</h2>
-				<p class="boxparagraph">
-					Segítünk, hogy az előszobába is a helyiség adottságaira szabott, így a lehető legjobb
-					helykihasználást eredményező, magas minőségű bútorok kerüljenek. Ügyfeleink a megfelelő
-					bútorlap kiválasztásában is számíthat ránk!
-				</p>
-			</div>
-			<img src="/images/products/hallway.jpeg" alt="hallway" class="image right" />
+	</div>
+	<div
+		class="flex flex-col-reverse max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+	>
+		<div class="w-full lg:w-[55%] h-full object-cover lg:clip-refLeft">
+			<img
+				src="/images/products/bathroom.jpeg"
+				alt="bathroom"
+				class="w-full h-full rounded-2xl lg:rounded-none"
+			/>
 		</div>
-		<div class="box">
-			<img src="/images/products/kitchen.jpeg" alt="kitchen" class="image left" />
-			<div class="textbox">
-				<h2 class="boxtitle">Faház</h2>
-				<p class="boxparagraph">
-					Szolgáltatásunk az egyedi bútorok teljes körű kivitelezése mellett különböző méretű és
-					funkciójú faházak elkészítésére is kiterjed. Ha a legkiválóbb ár-érték arányú kerti
-					építményt keresi, vegye fel velünk a kapcsolatot!
-				</p>
-			</div>
+		<div class="flex flex-col flex-1 w-full lg:w-[45%] p-0 lg:p-8">
+			<h2 class="font-semibold text-4xl text-zinc-100 mb-4">Fürdőszoba</h2>
+			<p class="font-normal text-xl lg:text-2xl text-zinc-300 leading-tight">
+				Egy valóban igényes bútor nemcsak praktikus kiegészítője egy fürdőszobának, hanem egyben a
+				dísze is! Amennyiben Ön is így gondolja, engedje meg, hogy megvalósítsuk az igényeire
+				szabott fürdőszobabútort!
+			</p>
 		</div>
-	</section>
-</Transition>
-
-<style>
-	section {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		height: fit-content;
-		min-height: 32rem;
-		gap: 4rem;
-	}
-	.title {
-		font-family: 'Inter', sans-serif;
-		font-weight: 600;
-		font-size: clamp(3rem, 4vw, 4rem);
-		color: var(--color-text-primary);
-		margin: 2rem 0 5rem 0;
-		text-align: center;
-	}
-	.box {
-		display: flex;
-		width: 100%;
-		max-width: 60rem;
-		height: 25rem;
-		background-color: var(--color-surface-700);
-		border-radius: 1rem;
-		overflow: hidden;
-		box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.12);
-	}
-	.textbox {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		width: 45%;
-		padding: 2rem;
-	}
-	.image {
-		width: 55%;
-		height: 100%;
-		object-fit: cover;
-	}
-	.left {
-		clip-path: polygon(0% 0, 90% 0, 100% 100%, 0% 100%);
-	}
-	.right {
-		clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-	}
-	.boxtitle {
-		font-family: 'Inter', sans-serif;
-		font-weight: 600;
-		font-size: 2.75rem;
-		color: var(--color-text-primary);
-	}
-	.boxparagraph {
-		font-family: 'Inter', sans-serif;
-		font-weight: 400;
-		font-size: 1.5rem;
-		margin: auto 0;
-		color: var(--color-text-secondary);
-	}
-
-	@media screen and (max-width: 1144px) {
-		.boxtitle {
-			font-size: 2.5rem;
-		}
-		.boxparagraph {
-			font-size: clamp(1.2rem, 2.25vw, 1.5rem);
-		}
-	}
-	@media screen and (max-width: 800px) {
-		section {
-			gap: 2rem;
-		}
-		.title {
-			font-size: 2.125rem;
-			margin: 2rem 0 3rem 0;
-		}
-		.box {
-			flex-direction: column;
-			width: 100%;
-			max-width: 30rem;
-			height: fit-content;
-			padding: 1.25rem;
-		}
-		.box:nth-child(even) {
-			flex-direction: column-reverse;
-		}
-		.textbox {
-			width: 100%;
-			padding: 0;
-		}
-		.boxtitle {
-			font-size: 2rem;
-			margin-bottom: 1rem;
-		}
-		.boxparagraph {
-			font-size: clamp(1.125rem, 2.25vw, 1.5rem);
-			margin: initial;
-		}
-		.image {
-			width: 100%;
-			height: 15rem;
-			object-fit: cover;
-			margin-top: 1.5rem;
-			border-radius: 0.5rem;
-			box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.12);
-		}
-		.right {
-			clip-path: none;
-		}
-		.left {
-			clip-path: none;
-		}
-	}
-</style>
+	</div>
+	<div
+		class="flex flex-col max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+	>
+		<div class="flex flex-col flex-1 w-full lg:w-[45%] p-0 lg:p-8">
+			<h2 class="font-semibold text-4xl text-zinc-100 mb-4">Előszoba</h2>
+			<p class="font-normal text-xl lg:text-2xl text-zinc-300 leading-tight">
+				Segítünk, hogy az előszobába is a helyiség adottságaira szabott, így a lehető legjobb
+				helykihasználást eredményező, magas minőségű bútorok kerüljenek. Ügyfeleink a megfelelő
+				bútorlap kiválasztásában is számíthat ránk!
+			</p>
+		</div>
+		<div class="w-full lg:w-[55%] h-full object-cover lg:clip-refRight aspect-[4/3] lg:aspect-auto">
+			<img
+				src="/images/products/hallway.jpeg"
+				alt="hallway"
+				class="w-full h-full rounded-2xl lg:rounded-none "
+			/>
+		</div>
+	</div>
+	<div
+		class="flex flex-col-reverse max-w-[28rem] gap-6 p-6 h-fit lg:w-full lg:h-[25rem] lg:gap-0 lg:p-0 lg:max-w-none lg:flex-row bg-zinc-800 rounded-3xl overflow-hidden shadow-xl"
+	>
+		<div class="w-full lg:w-[55%] h-full object-cover lg:clip-refLeft aspect-[4/3] lg:aspect-auto">
+			<img
+				src="/images/products/kitchen.jpeg"
+				alt="kitchen"
+				class="w-full h-full rounded-2xl lg:rounded-none"
+			/>
+		</div>
+		<div class="flex flex-col flex-1 w-full lg:w-[45%] p-0 lg:p-8">
+			<h2 class="font-semibold text-4xl text-zinc-100 mb-4">Faház</h2>
+			<p class="font-normal text-xl lg:text-2xl text-zinc-300 leading-tight">
+				Szolgáltatásunk az egyedi bútorok teljes körű kivitelezése mellett különböző méretű és
+				funkciójú faházak elkészítésére is kiterjed. Ha a legkiválóbb ár-érték arányú kerti
+				építményt keresi, vegye fel velünk a kapcsolatot!
+			</p>
+		</div>
+	</div>
+</div>

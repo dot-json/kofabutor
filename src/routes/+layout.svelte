@@ -34,7 +34,7 @@
 		setTimeout(() => {
 			firstLoad = false;
 			if (root) root.style.overflow = 'initial';
-		}, 1600);
+		}, 1400);
 	});
 
 	setContext('window_width', window_width);
